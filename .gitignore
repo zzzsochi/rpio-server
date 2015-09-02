@@ -1,4 +1,6 @@
 /lib
+/client/dist
+rpio-server
 
 *.DS_Store
 *.egg
