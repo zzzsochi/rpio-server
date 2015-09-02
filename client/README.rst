@@ -1,7 +1,7 @@
 rpio-client
 ===========
 
-Python client library for `rpio-server <https://github.com/zzzsochi/rpio-server>`_
+Python client library for `rpio-server <https://github.com/zzzsochi/rpio-server>`_.
 
 Installation
 ------------

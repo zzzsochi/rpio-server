@@ -7,9 +7,10 @@ README = open(os.path.join(here, 'README.rst')).read()
 
 
 setup(name='rpio-client',
-      version='1.0',
-      description='Client for rpio-server',
+      version='1.0.2',
+      description='Client library for rpio-server',
       long_description=README,
+      license='BSD',
       classifiers=[
           "License :: OSI Approved :: BSD License",
           "Operating System :: POSIX",
@@ -21,7 +22,7 @@ setup(name='rpio-client',
       ],
       author='Alexander Zelenyak aka ZZZ',
       author_email='zzz.sochi@gmail.com',
-      url='https://github.com/zzzsochi/rpio-server/client',
+      url='https://github.com/zzzsochi/rpio-server/tree/master/client',
       keywords=['gpio', 'rpi', 'raspberry', 'raspberrypi', 'go'],
       py_modules=['rpio_client'],
       )
