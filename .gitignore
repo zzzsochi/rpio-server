@@ -1,0 +1,12 @@
+/lib
+
+*.DS_Store
+*.egg
+*.egg-info
+__pycache__
+
+.python-version
+
+/*.sublime-project
+/*.sublime-settings
+/*.sublime-workspace
