@@ -1,5 +1,17 @@
-Python client library for rpio-server
--------------------------------------
+rpio-client
+===========
+
+Python client library for `rpio-server <https://github.com/zzzsochi/rpio-server>`_
+
+Installation
+------------
+
+.. code:: shell
+
+    pip install rpio-client
+
+API
+---
 
 All API in one example:
 
@@ -27,4 +39,5 @@ All API in one example:
 
         yield from client.close()  # close connection
 
+    loop = asyncio.get_event_loop()
     loop.run_until_complete(main(loop))
