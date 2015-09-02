@@ -6,7 +6,7 @@ Standalone server application to control GPIO on RaspberryPi.
 Problem
 -------
 
-For work with GPIO needs r/w access to `/dev/mem`, bat only root have this. Start users's applications as root is bad idea. Very bad. Yes, I'm paranoid.
+For work with GPIO needs r/w access to `/dev/mem`, but only root have this. Start users's applications as root is bad idea. Very bad. Yes, I'm paranoid.
 
 Why Go
 ------
@@ -42,9 +42,9 @@ API
 
 API is very simply! Use telnet, Luke!
 
-*Setting pin mode*
+**Setting pin mode**
 
-`<pin>` is decimal number of pin.
+*"<pin>" is decimal number of pin.*
 
 input <pin>
   Set input mode. Use *read* for read pin's state.
@@ -54,7 +54,7 @@ output <pin>
   Set output mode. Use *high*, *low* and *toggle*.
   Response "ok".
 
-*Pulling*
+**Pulling**
 
 pullup <pin>
   Set pulling to high.
@@ -68,7 +68,7 @@ pulloff <pin>
   Disable pulling.
   Response "ok".
 
-*Operations*
+**Operations**
 
 read <pin>
   Read pin's state. Response is "0" or "1".
@@ -85,13 +85,13 @@ toggle <pin>
   Toggle pin state.
   Response "ok".
 
-*Close*
+**Close**
 
 close
   Close connection from server.
   Response "bye".
 
-*Example telnet log*
+**Example telnet log**
 
 ::
 
