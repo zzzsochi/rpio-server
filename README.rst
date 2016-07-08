@@ -18,9 +18,10 @@ Building
 
 .. code:: shell
 
-    make compile
+    make lib
+    make pi
 
-Create `rpio-server` binary for arm linux, for run on RaspberryPi. For building I'm using OSX.
+Create `build/rpio-server` binary for arm linux, for run on RaspberryPi. For building I'm using OSX.
 
 Starting
 --------

@@ -5,22 +5,14 @@ help:
 
 
 clean:
-	rm -f ./rpio-server
-	rm -rf ./lib
+	rm -rf ./build
 
 
 lib:
-	mkdir -p lib/src/github.com/stianeikeland/
-	cd lib/src/github.com/stianeikeland/; git clone https://github.com/stianeikeland/go-rpio.git
+	GOPATH=`pwd`/build GOBIN=`pwd`/bin go get
 
 
 .PHONY: compile
 # target: compile - Compile Go code
-compile: lib
-	GOPATH=`pwd`/lib CC=arm-linux-gnueabihf-gcc GOOS=linux GOARCH=arm GOARM=6 go build -v -o rpio-server -ldflags="-extld=$CC"
-
-
-.PHONY: run
-# target: run - Run server without compiling
-run: lib
-	GOPATH=`pwd`/lib go run go-rpio-server.go
+pi:
+	GOPATH=`pwd`/build CC=arm-linux-gnueabihf-gcc GOOS=linux GOARCH=arm GOARM=6 go build -v -o build/rpio-server -ldflags="-extld=$CC"
